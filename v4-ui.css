@@ -87,3 +87,43 @@ body.concept-mari .site-header #site-nav .mega-group li a{font:400 15px/23px Man
 @media(max-width:767px){body.concept-mari .site-header #site-nav,body.concept-mari .site-header #site-nav.open{right:16px;width:calc(100vw - 32px)}.v4-dialog-header{padding:20px;gap:12px}.v4-dialog-body{padding:20px}.v4-dialog-header h2,body .v4-dialog-header h2{font-size:30px;line-height:34px}.v4-form-submit{width:100%}.v4-dialog--image .v4-dialog-header,.v4-dialog--video .v4-dialog-header{padding:12px 16px}body #v4-dialog.v4-dialog--image .v4-dialog-header h2,body #v4-dialog.v4-dialog--video .v4-dialog-header h2{font-size:15px;line-height:22px}.v4-view-controls{padding:8px;gap:6px}.v4-zoom-controls{gap:6px}.v4-zoom-controls [data-v4-scale]{min-width:100%;font-size:14px}.v4-image-stage{padding:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body.concept-mari .site-header #site-nav.open,body .v4-dialog[open]{animation:none!important}*,*::before,*::after{animation-duration:0s!important;animation-delay:0s!important;transition-duration:0s!important;scroll-behavior:auto!important}}
 @media(max-width:767px){.v4-view-controls{flex-direction:column;align-items:stretch;gap:24px;padding:12px 16px}.v5-document-controls,.v4-zoom-controls{gap:8px;margin:0;flex-wrap:wrap}.v4-zoom-controls:only-of-type{margin:0}.v5-scale-status:not(.sr-only){text-align:center}}
+/* V6 navigation, topic choice and forms. Scoped to shared interfaces. */
+body.concept-mari .site-header #site-nav{width:440px;overflow:hidden;gap:0;font:600 15px/22px Manrope,sans-serif}
+.v6-nav-fixed{flex:none;display:grid;gap:4px}
+.v6-nav-main{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px}
+body.concept-mari #site-nav :is(.v6-nav-main a,.v6-mobile-book,.v6-category-row a,.v6-nav-scroll a){display:flex;align-items:center;min-height:44px;padding:10px 12px;color:#302830;font:600 15px/22px Manrope,sans-serif;text-decoration:none;border-radius:8px;min-width:0}
+body.concept-mari #site-nav .nav-disclosure{min-height:44px;font:600 15px/22px Manrope,sans-serif}
+.v6-nav-scroll{min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.v6-nav-scroll:has(>div:not([hidden])){border-top:1px solid #D8CEC5;margin-top:12px;padding-top:8px}
+.v6-nav-scroll [hidden]{display:none!important}
+.v6-category-row{display:grid;grid-template-columns:minmax(0,1fr) 44px;align-items:center}
+body.concept-mari #site-nav .v6-category-row button{width:44px;height:44px;min-height:44px;padding:12px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;color:#402941}
+.v6-category-row button svg{width:18px;height:18px;transition:transform 180ms}
+.v6-category-row button[aria-expanded=true] svg{transform:rotate(180deg)}
+.v6-menu-category ul{list-style:none;margin:4px 0 8px 16px;padding:0 0 0 16px;border-left:1px solid #D8CEC5}
+body.concept-mari #site-nav .v6-menu-category ul a{font:400 14px/21px Manrope,sans-serif}
+body.concept-mari #site-nav .v6-mobile-book{display:none}
+.v4-form .v4-field label,.v4-form .v4-channels legend{font:600 14px/21px Manrope,sans-serif}
+.v4-form .v4-field input{height:50px}
+.v4-form .v4-field textarea{height:120px;min-height:120px}
+.v6-picker-intro{margin:0;font:400 16px/25px Manrope,sans-serif}
+.v6-picker-options{margin-top:20px;display:grid}
+.v6-picker-options a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;color:#302830;text-decoration:none;border-bottom:1px solid #D8CEC5;background:transparent}
+.v6-picker-options a:last-child{border-bottom:0}
+.v6-picker-options a:hover{background:#F0E8DF}
+.v6-picker-options a>span{display:grid;gap:6px}
+.v6-picker-options strong{font:600 25px/29px 'Cormorant Garamond',serif;color:#402941}
+.v6-picker-options span span{font:400 16px/25px Manrope,sans-serif}
+.v6-picker-options svg{width:18px;height:18px;flex:none}
+body #v4-dialog.v4-dialog--picker{max-height:calc(100dvh - 32px)}
+.v4-dialog--picker .v4-dialog-shell{max-height:calc(100dvh - 32px)}
+@media(max-width:767px){body.concept-mari .site-header #site-nav{width:calc(100vw - 24px);max-width:calc(100vw - 24px);right:12px}body.concept-mari #site-nav .v6-mobile-book{display:flex}body #v4-dialog{max-height:calc(100dvh - 24px)}.v4-dialog-shell{max-height:calc(100dvh - 24px)}.v4-dialog--image .v4-dialog-shell{height:calc(100dvh - 24px);max-height:calc(100dvh - 24px)}body #v4-dialog.v4-dialog--image{max-height:calc(100dvh - 24px)}body #v4-dialog.v4-dialog--image .v4-dialog-header h2{font:600 16px/24px Manrope,sans-serif}}
+@media(max-height:480px){body.concept-mari .site-header #site-nav{overflow-y:auto}.v6-nav-scroll{overflow:visible;flex:none}}
+body.concept-mari .site-header #site-nav.open{width:440px;overflow:hidden;gap:0}
+body.concept-mari .site-header #site-nav .v6-category-row a{white-space:normal;overflow-wrap:anywhere;display:block;align-content:center;font:600 15px/22px Manrope,sans-serif;max-width:100%}
+body.concept-mari .site-header #site-nav .v6-nav-fixed .nav-disclosure{font:600 15px/22px Manrope,sans-serif}
+body.concept-mari .site-header #site-nav .v6-menu-category ul a{white-space:normal;overflow-wrap:anywhere;font:400 14px/21px Manrope,sans-serif}
+@media(max-width:767px){body.concept-mari .site-header #site-nav,body.concept-mari .site-header #site-nav.open{width:calc(100vw - 24px);max-width:calc(100vw - 24px);right:12px}body.concept-mari #site-nav .v6-mobile-book{display:none}body.concept-mari #site-nav.v6-needs-book .v6-mobile-book{display:flex}}
+@media(max-height:480px){body.concept-mari .site-header #site-nav.open{overflow-y:auto}}
+body.concept-mari .site-header #site-nav .v6-mobile-book{display:none}
+@media(max-width:767px){body.concept-mari .site-header #site-nav.v6-needs-book .v6-mobile-book{display:flex}}

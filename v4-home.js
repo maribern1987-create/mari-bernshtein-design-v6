@@ -17,14 +17,18 @@
   function about(section) {
     const heading=section.querySelector('h2'), player=section.querySelector('.about-video');
     const link=section.querySelector('[data-page=H21]');
-    const text=document.createElement('div');
-    text.className='v4-intro-copy';
-    text.append(heading);
-    text.insertAdjacentHTML('beforeend','<p class="lead">Со мной не нужно подбирать «правильные» слова.</p><p>Я Мари Бернштейн, психолог. Работаю в репарационной психологии и терапии и использую ДПДГ. На встрече уделяю внимание вашим словам, чувствам, образам и телесным откликам.</p><p>Я задаю вопросы и предлагаю способы работы, а вы можете говорить, что замечаете, что вам подходит и что вызывает сомнения. Ваш отклик помогает мне вести нашу работу.</p>');
+    const intro=document.createElement('div');
+    intro.className='v4-intro-copy';
+    intro.append(heading);
+    intro.insertAdjacentHTML('beforeend','<p class="lead">Со мной не нужно подбирать «правильные» слова.</p>');
+    const body=document.createElement('div');
+    body.className='intro-details';
+    body.innerHTML='<p>Я Мари Бернштейн, психолог. Веду частную практику с 2024 года. Работаю в репарационной психологии и терапии, использую ДПДГ.</p><p>Вы можете задавать вопросы, сомневаться и говорить, если предложенный способ работы вам не подходит.</p>';
     player.querySelector('.v2-film-caption').textContent='Видео-знакомство · 4:04';
     link.className='v4-text-action v4-intro-link';
     link.innerHTML='Больше обо мне'+svg();
-    section.querySelector('.about-halves').replaceChildren(text,player,link);
+    body.append(link);
+    section.querySelector('.about-halves').replaceChildren(intro,player,body);
   }
   window.mountV4 = () => {
     const home=document.querySelector('#HM01');
