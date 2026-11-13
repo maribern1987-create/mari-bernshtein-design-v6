@@ -251,3 +251,4 @@
  .v4-footer-grid a{min-height:44px}
 }
 .v6-review-filter~.v3-review-archive-grid>[hidden]{display:none}
+@media(min-width:1024px) and (max-width:1279px){.v4-credentials .v3-credential-featured{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}}
