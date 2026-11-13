@@ -138,12 +138,13 @@
 .v4-footer p,.v4-footer a{font:400 15px/24px Manrope,sans-serif;color:inherit}
 .v4-footer-grid a{display:flex;align-items:center;gap:8px;text-decoration:none;min-height:44px;padding:6px 0}
 .v4-footer-grid a:hover,.v4-footer-grid a:focus-visible{text-decoration:underline}
-.v4-footer .v4-footer-contact{display:inline-flex;margin-top:4px;padding:12px 22px;border:1px solid #F9F4ED;border-radius:8px}
+.v4-footer .v4-footer-contact{font:600 15px/22px Manrope,sans-serif;display:inline-flex;margin-top:4px;padding:12px 22px;border:1px solid #F9F4ED;border-radius:8px}
 .v4-footer-contact+a{margin-top:12px}
+.v4-footer-contact+a+a{margin-top:8px}
 .v4-footer .social-links{display:grid;gap:8px;margin:0}
 .v4-footer .social-link{border:0;padding:6px 0;min-width:0;justify-content:start}
 .v4-footer-channels{border:0;border-radius:0;padding:0;background:none;box-shadow:none}
-.v4-prototype-note{border-top:1px solid #F9F4ED4d;margin:32px auto 0;padding-top:16px;font:400 14px/21px Manrope,sans-serif;color:inherit}
+.v4-footer .v4-prototype-note{border-top:1px solid #F9F4ED4d;margin:32px auto 0;padding-top:16px;font:400 14px/21px Manrope,sans-serif;color:inherit}
 @media(max-width:1279px){.v4-video-section .v4-video-card{flex-basis:calc((100% - 24px)/2)}.v4-session-columns{gap:48px}.v4-method-row{grid-template-columns:30fr 50fr 20fr;gap:24px}.v4-credentials .v3-credential-featured{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px}.v4-price-columns{grid-template-columns:1fr;gap:28px}.v4-price-intro{max-width:720px}.v4-contact .v2-appeal{grid-template-columns:4fr 5fr;gap:64px}.v4-footer-grid{grid-template-columns:1.2fr 1fr 1fr;gap:32px}}
 @media(max-width:1023px){.v4-session-columns{grid-template-columns:1fr;gap:28px}.v4-method-row{display:block}.v4-method-row>p{margin-top:12px}.v4-method-row>.v4-text-action{margin-top:16px}.v4-faq-layout{display:flex;flex-direction:column;gap:28px}.v4-faq .faq{order:0;width:100%}.v4-faq-hint{order:1}.v4-footer-grid{grid-template-columns:1fr 1fr}.v4-footer-contacts{grid-column:1}.v4-footer-documents{grid-column:2;grid-row:1 / span 2}.v4-footer-channels{grid-column:1}.v4-contact .v2-appeal{grid-template-columns:1fr;gap:16px}}
 @media(max-width:899px){.v4-text-reviews .v3-text-review-grid{grid-template-columns:1fr}.v4-text-card .v4-text-action{margin-top:0}}
